@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variations",
+  "info": {
+    "name": "variations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "product": {
+      "via": "variations",
+      "model": "products"
+    }
+  }
+}
