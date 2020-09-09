@@ -25,9 +25,34 @@
       "type": "decimal"
     },
     "user": {
-      "via": "orders",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "orders"
+    },
+    "order_name": {
+      "type": "string"
+    },
+    "order_email": {
+      "type": "email"
+    },
+    "order_phone_number": {
+      "type": "string"
+    },
+    "order_paid_via": {
+      "type": "string"
+    },
+    "order_tracking": {
+      "type": "string"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": true,
+      "component": "location.order-location"
+    },
+    "order": {
+      "type": "component",
+      "repeatable": true,
+      "component": "orders.order"
     }
   }
 }

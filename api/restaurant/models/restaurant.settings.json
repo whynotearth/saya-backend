@@ -30,6 +30,12 @@
       "collection": "categories",
       "via": "restaurants",
       "dominant": true
+    },
+    "restaurant_hours": {
+      "type": "component",
+      "repeatable": true,
+      "component": "hours.hours-of-operation",
+      "required": true
     }
   }
 }
