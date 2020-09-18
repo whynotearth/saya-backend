@@ -1,0 +1,58 @@
+name: Deploy to staging
+on:
+  push:
+    branches:
+      - staging
+jobs:
+  deploy:
+    name: AppEngineDeploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Insert service name into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<service-name>"
+          replace: "staging"
+          include: "app.yaml"
+
+      - name: Insert enviroment name into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<enviroment>"
+          replace: "staging"
+          include: "app.yaml"
+
+      - name: Insert db name into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<database_name>"
+          replace: "strapi-staging"
+          include: "app.yaml"
+
+      - name: Insert db username into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<database_username>"
+          replace: ${{ secrets.gcp_database_username }}
+          include: "app.yaml"
+
+      - name: Insert db name into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<database_password>"
+          replace: ${{ secrets.gcp_database_password }}
+          include: "app.yaml"
+
+      - name: Insert db name into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<database_instance_name>"
+          replace: ${{ secrets.gcp_database_instance_name }}
+          include: "app.yaml"
+
+      - name: Deploy
+        uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
+        with:
+          credentials: ${{ secrets.gcp_credentials }}
