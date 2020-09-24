@@ -1,0 +1,58 @@
+{
+    "kind": "collectionType",
+    "collectionName": "orders",
+    "info": {
+      "name": "orders"
+    },
+    "options": {
+      "increments": true,
+      "timestamps": true
+    },
+    "attributes": {
+      "address": {
+        "type": "string"
+      },
+      "postal_code": {
+        "type": "string"
+      },
+      "city": {
+        "type": "string"
+      },
+      "products": {
+        "type": "json"
+      },
+      "amount": {
+        "type": "decimal"
+      },
+      "user": {
+        "plugin": "users-permissions",
+        "model": "user",
+        "via": "orders"
+      },
+      "order_name": {
+        "type": "string"
+      },
+      "order_email": {
+        "type": "email"
+      },
+      "order_phone_number": {
+        "type": "string"
+      },
+      "order_paid_via": {
+        "type": "string"
+      },
+      "order_tracking": {
+        "type": "string"
+      },
+      "location": {
+        "type": "component",
+        "repeatable": true,
+        "component": "location.order-location"
+      },
+      "order": {
+        "type": "component",
+        "repeatable": true,
+        "component": "orders.order"
+      }
+    }
+  }
