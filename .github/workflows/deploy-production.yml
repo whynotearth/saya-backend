@@ -28,7 +28,7 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@master
         with:
           find: "<database_name>"
-          replace: "strapi"
+          replace: "strapi-production"
           include: "app.yaml"
 
       - name: Insert db username into app.yaml
