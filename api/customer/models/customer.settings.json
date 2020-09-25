@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Customer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "integer"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "confirmed": {
+      "type": "boolean"
+    },
+    "blocked": {
+      "type": "boolean"
+    },
+    "role": {
+      "plugin": "users-permissions",
+      "model": "role",
+      "via": "customer"
+    },
+    "orders": {
+      "collection": "orders",
+      "via": "customer"
+    },
+    "token": {
+      "model": "token",
+      "via": "customer"
+    }
+  }
+}

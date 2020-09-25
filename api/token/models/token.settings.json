@@ -1,21 +1,25 @@
 {
-    "kind": "collectionType",
-    "collectionName": "tokens",
-    "info": {
-      "name": "token"
+  "kind": "collectionType",
+  "collectionName": "tokens",
+  "info": {
+    "name": "token"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "token": {
+      "type": "string"
     },
-    "options": {
-      "increments": true,
-      "timestamps": true
+    "user": {
+      "via": "token",
+      "plugin": "users-permissions",
+      "model": "user"
     },
-    "attributes": {
-      "token": {
-        "type": "string"
-      },
-      "user": {
-        "plugin": "users-permissions",
-        "model": "user",
-        "via": "token"
-      }
+    "customer": {
+      "via": "token",
+      "model": "customer"
     }
   }
+}
