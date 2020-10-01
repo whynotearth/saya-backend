@@ -52,6 +52,27 @@ jobs:
           replace: ${{ secrets.gcp_database_instance_name }}
           include: "app.yaml"
 
+      - name: Insert cloudinary name into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<cloudinary_cloud_name>"
+          replace: ${{ secrets.cloudinary_cloud_name }}
+          include: "app.yaml"
+
+      - name: Insert cloudinary key into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<cloudinary_api_key>"
+          replace: ${{ secrets.cloudinary_api_key }}
+          include: "app.yaml"
+
+      - name: Insert cloudinary secret into app.yaml
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<cloudinary_api_secret>"
+          replace: ${{ secrets.cloudinary_api_secret }}
+          include: "app.yaml"
+
       - name: Deploy
         uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
         with:
