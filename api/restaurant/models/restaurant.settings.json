@@ -53,12 +53,10 @@
       ]
     },
     "Delivery_time": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "Delivery_fee": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "Type": {
       "type": "enumeration",
