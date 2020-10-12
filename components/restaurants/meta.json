@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_restaurants_metas",
+  "info": {
+    "name": "Meta",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "Tag": {
+      "type": "string"
+    }
+  }
+}

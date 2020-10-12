@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_restaurants_rich_texts",
+  "info": {
+    "name": "Rich_text",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Rich_text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "offers",
+  "info": {
+    "name": "Offer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "availability": {
+      "type": "integer"
+    },
+    "availabilityEnds": {
+      "type": "datetime"
+    },
+    "availabilityStarts": {
+      "type": "datetime"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "offers",
+      "dominant": true
+    },
+    "eligibleTransactionVolume": {
+      "type": "decimal"
+    },
+    "products": {
+      "collection": "products",
+      "via": "offers",
+      "dominant": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "restaurants": {
+      "via": "offers",
+      "collection": "restaurant",
+      "dominant": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
