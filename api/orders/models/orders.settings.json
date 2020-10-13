@@ -18,25 +18,19 @@
     "city": {
       "type": "string"
     },
-    "products": {
-      "type": "json"
-    },
     "amount": {
       "type": "decimal"
     },
-    "order_name": {
+    "name": {
       "type": "string"
     },
-    "order_email": {
+    "email": {
       "type": "email"
     },
-    "order_phone_number": {
+    "phone_number": {
       "type": "string"
     },
-    "order_paid_via": {
-      "type": "string"
-    },
-    "order_tracking": {
+    "tracking": {
       "type": "string"
     },
     "location": {
@@ -49,9 +43,10 @@
       "repeatable": true,
       "component": "orders.order"
     },
-    "customer": {
-      "via": "orders",
-      "model": "customer"
+    "payment_method": {
+      "type": "component",
+      "repeatable": false,
+      "component": "payment-method.payment-method"
     }
   }
 }

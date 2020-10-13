@@ -1,16 +1,19 @@
 {
-    "collectionName": "components_orders_orders",
-    "info": {
-      "name": "order",
-      "icon": "receipt"
+  "collectionName": "components_orders_orders",
+  "info": {
+    "name": "order",
+    "icon": "receipt"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "datetime"
     },
-    "options": {},
-    "attributes": {
-      "order_date": {
-        "type": "datetime"
-      },
-      "order_reference_id": {
-        "type": "string"
-      }
+    "reference_id": {
+      "type": "string"
+    },
+    "order_lines": {
+      "collection": "order-line"
     }
   }
+}

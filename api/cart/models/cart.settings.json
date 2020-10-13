@@ -1,21 +1,22 @@
 {
   "kind": "collectionType",
-  "collectionName": "tokens",
+  "collectionName": "carts",
   "info": {
-    "name": "token"
+    "name": "cart"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "token": {
-      "type": "string"
-    },
     "user": {
-      "via": "token",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "cart_product": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cart-product.cart-product"
     }
   }
 }

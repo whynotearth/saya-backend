@@ -33,10 +33,6 @@
       "via": "role",
       "configurable": false,
       "plugin": "users-permissions"
-    },
-    "customer": {
-      "via": "role",
-      "model": "customer"
     }
   }
 }

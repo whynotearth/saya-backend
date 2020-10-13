@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_orders_products",
+  "info": {
+    "name": "products",
+    "icon": "cart-plus"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}
