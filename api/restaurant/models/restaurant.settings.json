@@ -46,7 +46,7 @@
       "repeatable": true,
       "component": "restaurants.meta"
     },
-    "Content": {
+    "Type": {
       "type": "dynamiczone",
       "components": [
         "restaurants.meta"
@@ -58,17 +58,10 @@
     "Delivery_fee": {
       "type": "integer"
     },
-    "Type": {
-      "type": "enumeration",
-      "enum": [
-        "vegetarian",
-        "vegan",
-        "spicey",
-        "plastic_free",
-        "gluten_free",
-        "dairy_free",
-        "cambodian_owned"
-      ]
+    "Visible": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

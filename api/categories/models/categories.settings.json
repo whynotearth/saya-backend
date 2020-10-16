@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "categories",
   "info": {
-    "name": "Categories"
+    "name": "Menu_Section"
   },
   "options": {
     "increments": true,
@@ -13,7 +13,7 @@
       "type": "string",
       "required": true
     },
-    "description": {
+    "about": {
       "type": "richtext"
     },
     "image": {
@@ -35,8 +35,8 @@
       "collection": "restaurant"
     },
     "offers": {
-      "via": "categories",
-      "collection": "offer"
+      "collection": "offer",
+      "via": "categories"
     }
   }
 }
