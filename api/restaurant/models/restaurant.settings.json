@@ -41,16 +41,10 @@
       "collection": "offer",
       "via": "restaurants"
     },
-    "Meta": {
+    "Type": {
       "type": "component",
       "repeatable": true,
       "component": "restaurants.meta"
-    },
-    "Type": {
-      "type": "dynamiczone",
-      "components": [
-        "restaurants.meta"
-      ]
     },
     "Delivery_time": {
       "type": "integer"
@@ -61,7 +55,7 @@
     "Visible": {
       "type": "boolean",
       "default": false,
-      "required": true
+      "required": false
     }
   }
 }
