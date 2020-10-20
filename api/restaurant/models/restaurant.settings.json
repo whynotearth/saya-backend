@@ -41,16 +41,10 @@
       "collection": "offer",
       "via": "restaurants"
     },
-    "Meta": {
+    "Type": {
       "type": "component",
       "repeatable": true,
       "component": "restaurants.meta"
-    },
-    "Content": {
-      "type": "dynamiczone",
-      "components": [
-        "restaurants.meta"
-      ]
     },
     "Delivery_time": {
       "type": "integer"
@@ -58,17 +52,10 @@
     "Delivery_fee": {
       "type": "integer"
     },
-    "Type": {
-      "type": "enumeration",
-      "enum": [
-        "vegetarian",
-        "vegan",
-        "spicey",
-        "plastic_free",
-        "gluten_free",
-        "dairy_free",
-        "cambodian_owned"
-      ]
+    "Visible": {
+      "type": "boolean",
+      "default": false,
+      "required": false
     }
   }
 }

@@ -6,8 +6,20 @@
   },
   "options": {},
   "attributes": {
-    "Tag": {
-      "type": "string"
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "western",
+        "indian",
+        "cambodian",
+        "burger",
+        "pizza",
+        "swiss",
+        "hungarian",
+        "vegetarian_vegan",
+        "plastic_free",
+        "italian"
+      ]
     }
   }
 }

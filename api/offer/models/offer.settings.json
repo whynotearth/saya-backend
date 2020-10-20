@@ -19,16 +19,16 @@
       "type": "datetime"
     },
     "categories": {
-      "collection": "categories",
       "via": "offers",
+      "collection": "categories",
       "dominant": true
     },
     "eligibleTransactionVolume": {
       "type": "decimal"
     },
     "products": {
-      "collection": "products",
       "via": "offers",
+      "collection": "products",
       "dominant": true
     },
     "price": {
