@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "products",
   "info": {
-    "name": "Menu_Item"
+    "name": "Products"
   },
   "options": {
     "increments": true,
@@ -86,16 +86,8 @@
       "collection": "attributes"
     },
     "offers": {
-      "collection": "offer",
-      "via": "products"
-    },
-    "Featured": {
-      "type": "boolean",
-      "default": false,
-      "required": false
-    },
-    "suitable_for_diet": {
-      "type": "string"
+      "via": "products",
+      "collection": "offer"
     }
   }
 }
