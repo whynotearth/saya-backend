@@ -15,9 +15,6 @@
     "price": {
       "type": "decimal"
     },
-    "stock": {
-      "type": "integer"
-    },
     "sku": {
       "type": "string"
     },
@@ -33,8 +30,8 @@
       "required": false
     },
     "product": {
-      "model": "products",
-      "via": "add_ons"
+      "via": "add_ons",
+      "model": "products"
     }
   }
 }

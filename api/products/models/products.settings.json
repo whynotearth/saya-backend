@@ -43,18 +43,6 @@
       "type": "decimal",
       "required": true
     },
-    "weight": {
-      "type": "decimal",
-      "required": true
-    },
-    "stock": {
-      "required": true,
-      "type": "integer"
-    },
-    "sku": {
-      "type": "string",
-      "unique": true
-    },
     "special_instructions": {
       "type": "boolean",
       "default": false,
@@ -82,8 +70,8 @@
       "via": "product"
     },
     "add_ons": {
-      "via": "product",
-      "collection": "attributes"
+      "collection": "attributes",
+      "via": "product"
     },
     "offers": {
       "collection": "offer",
