@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_payment_method_payment_methods",
+  "info": {
+    "name": "payment_method",
+    "icon": "credit-card"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "cash"
+      ]
+    }
+  }
+}

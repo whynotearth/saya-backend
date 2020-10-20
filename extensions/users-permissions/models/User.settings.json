@@ -62,6 +62,10 @@
     },
     "phone": {
       "type": "integer"
+    },
+    "payment_method_types": {
+      "via": "users",
+      "collection": "payment-method-types"
     }
   }
 }

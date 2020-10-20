@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_method_types",
+  "info": {
+    "name": "Payment Method Types"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Cash"
+      ]
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "payment_method_types",
+      "dominant": true
+    }
+  }
+}
