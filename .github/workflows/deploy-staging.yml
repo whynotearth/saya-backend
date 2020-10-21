@@ -73,6 +73,20 @@ jobs:
           replace: ${{ secrets.cloudinary_api_secret }}
           include: "app.yaml"
 
+      - name: Set site URL
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<url>"
+          replace: "https://staging-dot-saya-backend.et.r.appspot.com"
+          include: "app.yaml"
+
+      - name: Insert JWT Token Encryption Key
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "<strapi_jwt_secret>"
+          replace: ${{ secrets.ADMIN_JWT_SECRET_STAGING }}
+          include: "app.yaml"
+
       - name: Deploy
         uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
         with:
