@@ -27,8 +27,8 @@
       "required": false
     },
     "categories": {
-      "via": "restaurants",
       "collection": "categories",
+      "via": "restaurants",
       "dominant": true
     },
     "restaurant_hours": {
@@ -69,6 +69,17 @@
         "dairy_free",
         "cambodian_owned"
       ]
+    },
+    "cover_photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

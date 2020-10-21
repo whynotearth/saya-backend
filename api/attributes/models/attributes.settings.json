@@ -1,40 +1,34 @@
 {
-    "kind": "collectionType",
-    "collectionName": "add_ons",
-    "info": {
-      "name": "add_ons"
+  "kind": "collectionType",
+  "collectionName": "add_ons",
+  "info": {
+    "name": "Collection Type"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
     },
-    "options": {
-      "increments": true,
-      "timestamps": true
+    "price": {
+      "type": "decimal"
     },
-    "attributes": {
-      "name": {
-        "type": "string"
-      },
-      "price": {
-        "type": "decimal"
-      },
-      "stock": {
-        "type": "integer"
-      },
-      "sku": {
-        "type": "string"
-      },
-      "image": {
-        "collection": "file",
-        "via": "related",
-        "allowedTypes": [
-          "images",
-          "files",
-          "videos"
-        ],
-        "plugin": "upload",
-        "required": false
-      },
-      "product": {
-        "model": "products",
-        "via": "add_ons"
-      }
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "product": {
+      "model": "products",
+      "via": "add_ons"
     }
   }
+}

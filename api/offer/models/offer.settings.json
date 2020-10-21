@@ -27,8 +27,8 @@
       "type": "decimal"
     },
     "products": {
-      "collection": "products",
       "via": "offers",
+      "collection": "products",
       "dominant": true
     },
     "price": {
