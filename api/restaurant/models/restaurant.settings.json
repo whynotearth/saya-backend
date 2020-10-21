@@ -27,8 +27,8 @@
       "required": false
     },
     "categories": {
-      "collection": "categories",
       "via": "restaurants",
+      "collection": "categories",
       "dominant": true
     },
     "restaurant_hours": {

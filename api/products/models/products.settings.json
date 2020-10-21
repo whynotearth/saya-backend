@@ -17,8 +17,8 @@
       "type": "richtext"
     },
     "categories": {
-      "collection": "categories",
       "via": "products",
+      "collection": "categories",
       "dominant": true
     },
     "image": {

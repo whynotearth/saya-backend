@@ -17,7 +17,7 @@
       "type": "richtext"
     },
     "image": {
-      "collection": "file",
+      "model": "file",
       "via": "related",
       "allowedTypes": [
         "images",
@@ -27,16 +27,16 @@
       "required": false
     },
     "products": {
-      "via": "categories",
-      "collection": "products"
+      "collection": "products",
+      "via": "categories"
     },
     "restaurants": {
-      "via": "categories",
-      "collection": "restaurant"
+      "collection": "restaurant",
+      "via": "categories"
     },
     "offers": {
-      "via": "categories",
-      "collection": "offer"
+      "collection": "offer",
+      "via": "categories"
     }
   }
 }
