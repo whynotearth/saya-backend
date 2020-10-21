@@ -5,15 +5,17 @@ instance_class: F2
 service: <service-name>
 
 env_variables:
-  HOST: '0.0.0.0'
-  NODE_ENV: '<enviroment>'
-  DATABASE_NAME: '<database_name>'
-  DATABASE_USERNAME: '<database_username>'
-  DATABASE_PASSWORD: '<database_password>'
-  INSTANCE_CONNECTION_NAME: '<database_instance_name>'
-  CLOUDINARY_CLOUD_NAME: '<cloudinary_cloud_name>'
-  CLOUDINARY_API_KEY: '<cloudinary_api_key>'
-  CLOUDINARY_API_SECRET: '<cloudinary_api_secret>'
+  HOST: "0.0.0.0"
+  NODE_ENV: "<enviroment>"
+  DATABASE_NAME: "<database_name>"
+  DATABASE_USERNAME: "<database_username>"
+  DATABASE_PASSWORD: "<database_password>"
+  INSTANCE_CONNECTION_NAME: "<database_instance_name>"
+  CLOUDINARY_CLOUD_NAME: "<cloudinary_cloud_name>"
+  CLOUDINARY_API_KEY: "<cloudinary_api_key>"
+  CLOUDINARY_API_SECRET: "<cloudinary_api_secret>"
+  ADMIN_JWT_SECRET: "<strapi_jwt_secret>"
+  URL: "<url>"
 
 beta_settings:
-  cloud_sql_instances: '<database_instance_name>'
+  cloud_sql_instances: "<database_instance_name>"
