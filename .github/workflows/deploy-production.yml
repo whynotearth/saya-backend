@@ -73,11 +73,6 @@ jobs:
           replace: ${{ secrets.cloudinary_api_secret }}
           include: "app.yaml"
 
-      - name: Deploy
-        uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
-        with:
-          credentials: ${{ secrets.gcp_credentials }}
-
       - name: Set site URL
         uses: jacobtomlinson/gha-find-replace@master
         with:
@@ -91,3 +86,8 @@ jobs:
           find: "<strapi_jwt_secret>"
           replace: ${{ secrets.ADMIN_JWT_SECRET_PRODUCTION }}
           include: "app.yaml"
+
+      - name: Deploy
+        uses: GoogleCloudPlatform/github-actions/appengine-deploy@master
+        with:
+          credentials: ${{ secrets.gcp_credentials }}
