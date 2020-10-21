@@ -19,8 +19,8 @@
       "type": "datetime"
     },
     "categories": {
-      "collection": "categories",
       "via": "offers",
+      "collection": "categories",
       "dominant": true
     },
     "eligibleTransactionVolume": {
