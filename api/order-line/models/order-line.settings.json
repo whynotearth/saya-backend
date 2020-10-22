@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "order_lines",
   "info": {
-    "name": "Order Line"
+    "name": "Order Lines"
   },
   "options": {
     "increments": true,

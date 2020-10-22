@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "Menu_Items",
   "info": {
-    "name": "Menu Item"
+    "name": "Menu Items"
   },
   "options": {
     "increments": true,
@@ -15,11 +15,6 @@
     },
     "description": {
       "type": "richtext"
-    },
-    "categories": {
-      "collection": "categories",
-      "via": "products",
-      "dominant": true
     },
     "image": {
       "collection": "file",
@@ -47,17 +42,22 @@
       "type": "boolean",
       "required": true
     },
-    "variations": {
-      "collection": "variations",
-      "via": "product"
-    },
-    "add_ons": {
-      "via": "product",
-      "collection": "attributes"
-    },
     "offers": {
       "collection": "offer",
       "via": "products"
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "menu_items"
+    },
+    "menu_section": {
+      "model": "menu-sections",
+      "via": "menu_items"
+    },
+    "add_ons": {
+      "collection": "variations",
+      "via": "menu_items",
+      "dominant": true
     }
   }
 }

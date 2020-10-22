@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "offers",
   "info": {
-    "name": "Offer"
+    "name": "Offers"
   },
   "options": {
     "increments": true,
@@ -17,11 +17,6 @@
     },
     "availabilityStarts": {
       "type": "datetime"
-    },
-    "categories": {
-      "via": "offers",
-      "collection": "categories",
-      "dominant": true
     },
     "eligibleTransactionVolume": {
       "type": "decimal"
