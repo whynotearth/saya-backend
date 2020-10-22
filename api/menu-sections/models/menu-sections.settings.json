@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menu_sections",
+  "info": {
+    "name": "Menu Sections"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "menu_items": {
+      "via": "menu_section",
+      "collection": "products"
+    },
+    "restaurant": {
+      "via": "menu_sections",
+      "model": "restaurant"
+    }
+  }
+}

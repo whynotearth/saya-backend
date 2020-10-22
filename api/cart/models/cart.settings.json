@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "carts",
   "info": {
-    "name": "cart"
+    "name": "carts"
   },
   "options": {
     "increments": true,

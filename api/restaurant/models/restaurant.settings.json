@@ -26,11 +26,6 @@
       "plugin": "upload",
       "required": false
     },
-    "categories": {
-      "via": "restaurants",
-      "collection": "categories",
-      "dominant": true
-    },
     "restaurant_hours": {
       "type": "component",
       "repeatable": true,
@@ -41,34 +36,40 @@
       "collection": "offer",
       "via": "restaurants"
     },
-    "Meta": {
-      "type": "component",
-      "repeatable": true,
-      "component": "restaurants.meta"
-    },
-    "Content": {
-      "type": "dynamiczone",
-      "components": [
-        "restaurants.meta"
-      ]
-    },
     "Delivery_time": {
       "type": "integer"
     },
     "Delivery_fee": {
       "type": "integer"
     },
-    "Type": {
-      "type": "enumeration",
-      "enum": [
-        "vegetarian",
-        "vegan",
-        "spicey",
-        "plastic_free",
-        "gluten_free",
-        "dairy_free",
-        "cambodian_owned"
-      ]
+    "cover_photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "menu_items": {
+      "via": "restaurant",
+      "collection": "products"
+    },
+    "Average_Cost_Two_People": {
+      "type": "decimal"
+    },
+    "categories": {
+      "via": "restaurants",
+      "collection": "categories"
+    },
+    "menu_sections": {
+      "collection": "menu-sections",
+      "via": "restaurant"
+    },
+    "Price_Range": {
+      "type": "integer"
     }
   }
 }

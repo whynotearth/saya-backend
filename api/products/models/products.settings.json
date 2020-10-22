@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "Menu_Items",
   "info": {
-    "name": "Products"
+    "name": "Menu Items"
   },
   "options": {
     "increments": true,
@@ -16,11 +16,6 @@
     "description": {
       "type": "richtext"
     },
-    "categories": {
-      "via": "products",
-      "collection": "categories",
-      "dominant": true
-    },
     "image": {
       "collection": "file",
       "via": "related",
@@ -31,11 +26,6 @@
       "plugin": "upload",
       "required": true
     },
-    "checkout_trigger": {
-      "type": "string",
-      "default": "#",
-      "unique": true
-    },
     "short_description": {
       "type": "richtext"
     },
@@ -43,51 +33,31 @@
       "type": "decimal",
       "required": true
     },
-    "weight": {
-      "type": "decimal",
-      "required": true
-    },
-    "stock": {
-      "required": true,
-      "type": "integer"
-    },
-    "sku": {
-      "type": "string",
-      "unique": true
-    },
     "special_instructions": {
       "type": "boolean",
       "default": false,
       "required": true
     },
-    "allow_multiple": {
-      "type": "boolean",
-      "default": true,
-      "required": true
-    },
-    "max_quantity": {
-      "type": "integer"
-    },
     "visible": {
       "type": "boolean",
       "required": true
     },
-    "request_address": {
-      "type": "boolean",
-      "default": true,
-      "required": true
+    "offers": {
+      "collection": "offer",
+      "via": "products"
     },
-    "variations": {
-      "collection": "variations",
-      "via": "product"
+    "restaurant": {
+      "model": "restaurant",
+      "via": "menu_items"
+    },
+    "menu_section": {
+      "model": "menu-sections",
+      "via": "menu_items"
     },
     "add_ons": {
-      "via": "product",
-      "collection": "attributes"
-    },
-    "offers": {
-      "via": "products",
-      "collection": "offer"
+      "collection": "variations",
+      "via": "menu_items",
+      "dominant": true
     }
   }
 }

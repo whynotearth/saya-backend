@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "tokens",
   "info": {
-    "name": "token"
+    "name": "tokens"
   },
   "options": {
     "increments": true,
@@ -13,9 +13,9 @@
       "type": "string"
     },
     "user": {
-      "via": "token",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "token"
     }
   }
 }
