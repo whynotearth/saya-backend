@@ -16,9 +16,9 @@
       ]
     },
     "users": {
+      "via": "payment_method_types",
       "plugin": "users-permissions",
       "collection": "user",
-      "via": "payment_method_types",
       "dominant": true
     }
   }

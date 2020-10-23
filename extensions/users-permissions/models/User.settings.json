@@ -57,15 +57,19 @@
       "collection": "orders"
     },
     "token": {
-      "via": "user",
-      "model": "token"
+      "model": "token",
+      "via": "user"
     },
     "phone": {
       "type": "integer"
     },
     "payment_method_types": {
-      "via": "users",
-      "collection": "payment-method-types"
+      "collection": "payment-method-types",
+      "via": "users"
+    },
+    "cart": {
+      "model": "cart",
+      "via": "user"
     }
   }
 }

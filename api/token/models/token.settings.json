@@ -13,9 +13,9 @@
       "type": "string"
     },
     "user": {
+      "via": "token",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "token"
+      "model": "user"
     }
   }
 }
