@@ -30,9 +30,6 @@
     "phone_number": {
       "type": "string"
     },
-    "tracking": {
-      "type": "string"
-    },
     "location": {
       "type": "component",
       "repeatable": true,
@@ -47,6 +44,9 @@
       "type": "component",
       "repeatable": false,
       "component": "payment-method.payment-method"
+    },
+    "reference_id": {
+      "type": "string"
     }
   }
 }

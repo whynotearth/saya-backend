@@ -9,9 +9,6 @@
     "date": {
       "type": "datetime"
     },
-    "reference_id": {
-      "type": "string"
-    },
     "order_lines": {
       "collection": "order-line"
     }
