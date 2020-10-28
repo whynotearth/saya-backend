@@ -68,8 +68,8 @@
       "via": "users"
     },
     "cart": {
-      "model": "cart",
-      "via": "user"
+      "via": "user",
+      "model": "cart"
     }
   }
 }

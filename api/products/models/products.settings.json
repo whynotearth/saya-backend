@@ -58,6 +58,10 @@
       "collection": "variations",
       "via": "menu_items",
       "dominant": true
+    },
+    "cart_menu_item": {
+      "via": "menu_item",
+      "model": "cart-menu-items"
     }
   }
 }
