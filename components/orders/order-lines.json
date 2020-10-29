@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_orders_order_line",
+  "info": {
+    "name": "order-line",
+    "icon": "grip-lines"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "quantity": {
+      "type": "integer"
+    }
+  }
+}

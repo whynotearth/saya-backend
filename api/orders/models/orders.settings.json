@@ -47,6 +47,11 @@
     },
     "reference_id": {
       "type": "string"
+    },
+    "order_lines": {
+      "type": "component",
+      "repeatable": true,
+      "component": "orders.order-lines"
     }
   }
 }
