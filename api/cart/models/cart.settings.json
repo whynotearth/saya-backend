@@ -14,9 +14,10 @@
       "model": "user",
       "via": "cart"
     },
-    "cart_menu_items": {
-      "via": "cart",
-      "collection": "cart-menu-items"
+    "cart_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "cart.cart-menu-items"
     }
   }
 }
