@@ -6,8 +6,8 @@
   },
   "options": {},
   "attributes": {
-    "menu_items": {
-      "collection": "products"
+    "menu_item": {
+      "model": "products"
     },
     "cart_menu_item_quantity": {
       "type": "integer"
