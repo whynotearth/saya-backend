@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "name": "Address"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "place_name": {
+      "type": "string"
+    },
+    "user_location": {
+      "type": "component",
+      "repeatable": true,
+      "component": "location.order-location"
+    },
+    "Location_json": {
+      "type": "json"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "addresses"
+    },
+    "street_address_2": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "zipcode": {
+      "type": "integer"
+    },
+    "street_address_1": {
+      "type": "string"
+    },
+    "address_notes": {
+      "type": "string"
+    },
+    "house_number": {
+      "type": "string"
+    }
+  }
+}

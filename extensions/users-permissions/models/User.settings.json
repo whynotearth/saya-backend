@@ -70,6 +70,10 @@
     "cart": {
       "via": "user",
       "model": "cart"
+    },
+    "addresses": {
+      "via": "user",
+      "collection": "address"
     }
   }
 }
