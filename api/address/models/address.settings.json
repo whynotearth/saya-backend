@@ -25,9 +25,6 @@
       "model": "user",
       "via": "addresses"
     },
-    "street_address_2": {
-      "type": "string"
-    },
     "city": {
       "type": "string"
     },
@@ -37,13 +34,10 @@
     "zipcode": {
       "type": "integer"
     },
-    "street_address_1": {
+    "floor": {
       "type": "string"
     },
-    "address_notes": {
-      "type": "string"
-    },
-    "house_number": {
+    "where_to_park": {
       "type": "string"
     }
   }
