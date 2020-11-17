@@ -2,11 +2,13 @@
   "kind": "collectionType",
   "collectionName": "addresses",
   "info": {
-    "name": "Address"
+    "name": "Address",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": false
   },
   "attributes": {
     "place_name": {
@@ -38,6 +40,18 @@
       "type": "string"
     },
     "where_to_park": {
+      "type": "string"
+    },
+    "building_name": {
+      "type": "string"
+    },
+    "street_name_num": {
+      "type": "string"
+    },
+    "town_area": {
+      "type": "string"
+    },
+    "apartment_no": {
       "type": "string"
     }
   }
